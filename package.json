@@ -6,8 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "commit": "cz"
+    "lint": "eslint . --max-warnings=0",
+    "commit": "cz",
+    "prettier:check": "prettier --check ."
   },
   "dependencies": {
     "next": "15.1.6",
@@ -15,6 +16,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -27,12 +30,9 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   }
-
-  
 }
